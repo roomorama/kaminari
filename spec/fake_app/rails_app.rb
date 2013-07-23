@@ -20,6 +20,7 @@ app.initialize!
 # routes
 app.routes.draw do
   resources :users
+  get ':year(/:month(/:day))' => 'users#index', as: :users_by_date
 end
 
 #models
